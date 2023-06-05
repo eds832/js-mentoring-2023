@@ -1,12 +1,12 @@
 // 1. Write a JavaScript function that takes two numbers as parameters and returns their sum.
-let func1 = (a, b) => a + b;
+const func1 = (a, b) => a + b;
 
 console.log("func1(2, 3) = " + func1(2, 3));
 
 // 2. Write a JavaScript function that checks if a variable is of type 'string'
 // and returns true if it is, false otherwise.
 
-let func2 = (a) => typeof a === "string";
+const func2 = (a) => typeof a === "string" || a instanceof String;
 
 console.log('func2("Some String") = ' + func2("Some String"));
 console.log("Primitive number func2(5) = " + func2(5));
@@ -18,12 +18,14 @@ console.log("func2(undefined) = " + func2(undefined));
 // 3. Write a JavaScript function that checks if a given value is a primitive data type
 // (number, string, boolean, null, or undefined) and returns true if it is, false otherwise.
 
-let func3 = (a) =>
+const func3 = (a) =>
   a === null ||
   a === undefined ||
   typeof a === "number" ||
   typeof a === "boolean" ||
-  typeof a === "string";
+  typeof a === "string" ||
+  typeof a === "symbol" ||
+  typeof a === "bigint";
 
 console.log("Primitive number func3(5) = " + func3(5));
 console.log('func3("Some Primitive String") = ' + func3("Some String"));
@@ -75,7 +77,7 @@ console.log("Here func_bad_var is also accessible: " + func_bad_var);
 
 // 6. Write a JavaScript function that checks if a given value is an object and
 // returns true if it is, false otherwise.
-let func6 = (a) => a !== null && typeof a === "object";
+const func6 = (a) => a !== null && typeof a === "object";
 
 console.log("Object func6({}) = " + func6({}));
 console.log("Primitive number func6(5) = " + func6(5));
