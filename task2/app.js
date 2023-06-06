@@ -75,9 +75,9 @@ class Car {
     this.make = make;
     this.model = model;
     this.year = year;
-    this.getInfo = function () {
-      return `Car{make:${this.make}, model:${this.model}, year:${this.year}`;
-    };
+  }
+  getInfo() {
+    return `Car{make:${this.make}, model:${this.model}, year:${this.year}`;
   }
 }
 
