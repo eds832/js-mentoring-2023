@@ -18,7 +18,7 @@ console.log("func2([2, 3, true, 'a']) =", result2);
 // 3. Write a JavaScript function that takes an array of strings as input, sorts the strings
 // in ascending order, and returns the sorted array.
 
-const func3 = (arr) => arr.sort();
+const func3 = (arr) => arr.sort(); // toSorted() - keeps initial arr, returns new sorted
 
 const result3 = func3(["bc", "ab", "cd", "aa", "a1", "aaa"]);
 
@@ -27,7 +27,7 @@ console.log('func3(["bc", "ab", "cd", "aa", "a1", "aaa"]) =', result3);
 // 4. Write a JavaScript function that takes two arrays as input, combines them into
 // a single array, and returns the result.
 
-const func4 = (arr1, arr2) => [arr1, arr2].flatMap((elem) => elem);
+const func4 = (arr1, arr2) => [...arr1, ...arr2]; // arr1.concat(arr2) the same result
 
 const result4 = func4([1, 2, 3, 4], ["a", "b"]);
 
@@ -77,7 +77,7 @@ try {
 // Invoke the inner function and observe the output.
 
 function func8() {
-  var var1 = 77;
+  const var1 = 77;
   return function (arg) {
     console.log(var1 + arg); // var1 from outer function is visible inside of the inner function
   };
@@ -89,7 +89,7 @@ func8()(23); // 100
 // of a given number.
 
 const func9 = (num) => {
-  if (num < 0 || num % 1 !== 0) return undefined;
+  if (num < 0 || !Number.isInteger(num)) return undefined;
   function factorial(n) {
     if (n > 0) {
       return n * factorial(n - 1);
