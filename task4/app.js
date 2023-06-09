@@ -5,9 +5,7 @@ class Person {
   constructor(name) {
     this.name = name;
   }
-  sayHello(greeting, question) {
-    greeting = greeting === undefined ? "Hello!" : greeting;
-    question = question === undefined ? "What is your name?" : question;
+  sayHello(greeting = "Hello!", question = "What is your name?") {
     console.log(`${greeting} My name is ${this.name}. ${question}`);
   }
 }
