@@ -1,0 +1,70 @@
+/* Write a CSS selector to target all <p> elements with a class of "highlight" 
+and give them a background color of yellow.*/
+p.highlight {
+  background-color: yellow;
+}
+
+/* Set the text color of all headings (<h1> to <h6>) to red.*/
+h1,
+h6 {
+  color: red;
+}
+
+/* Set the font size of all paragraphs (<p> elements) to 14 pixels and make the font 
+size of paragraphs inside a <div> element with a class of "special" to 16 pixels.*/
+p {
+  font-size: 14px;
+  margin: 5px;
+}
+div p.special {
+  font-size: 16px;
+}
+
+/* Style all <h1> elements with a font family of "Arial", font size
+ of 24 pixels, and text color of blue.*/
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: blue; /* this overrides line #10 */
+  text-align: center;
+}
+
+/* Add a border, padding, and margin to a <div> element.*/
+div {
+  border: 1px dotted orange;
+  padding: 5px;
+  margin: 7px;
+}
+
+/* Create a layout using CSS Grid or Flexbox with a header, sidebar, and main content area.*/
+body {
+  display: flow-root;
+}
+header,
+main {
+  border: 1px dashed blue;
+}
+aside {
+  flex: 1 0 20%;
+  border: 1px dashed blue;
+  min-width: 330px;
+}
+.wrapper {
+  display: flex;
+}
+h6 {
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}
+
+/* Float an image to the left and position a caption below it.*/
+#div-img {
+  float: left;
+}
+#img-cap {
+  margin-left: 70px;
+}
