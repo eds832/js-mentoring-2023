@@ -37,16 +37,13 @@ div {
 }
 
 /* Create a layout using CSS Grid or Flexbox with a header, sidebar, and main content area.*/
-body {
-  display: flow-root;
-}
 header,
-main {
+main,
+aside {
   border: 1px dashed blue;
 }
 aside {
-  flex: 1 0 20%;
-  border: 1px dashed blue;
+  width: 20%;
   min-width: 330px;
 }
 .wrapper {
@@ -62,9 +59,6 @@ h6 {
 }
 
 /* Float an image to the left and position a caption below it.*/
-#div-img {
-  float: left;
-}
 #img-cap {
   margin-left: 70px;
 }
