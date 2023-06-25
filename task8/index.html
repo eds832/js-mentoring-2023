@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Main page</title>
+  </head>
+  <body>
+    <h1>Task 8</h1>
+    <ol>
+      <li>
+        <p>
+          Use the window.location object to redirect the user to a different
+          webpage when a button is clicked.
+        </p>
+        <button onclick="redirectToGoogle()">Go to Google</button>
+      </li>
+      <li>
+        <p>
+          Use the window.history object to go back to the previous page when a
+          button is clicked.
+        </p>
+        <button onclick="goBackToPreviousPage()">
+          Go Back to The Previous Page
+        </button>
+      </li>
+      <li>
+        <p>
+          Access and display the user's browser name and version using the
+          window.navigator object.
+        </p>
+        <p id="browser-output"></p>
+      </li>
+      <li>
+        <p>
+          Display the screen width and height of the user's device using the
+          window.screen object.
+        </p>
+        <p id="size-output"></p>
+      </li>
+      <li>
+        <p>
+          Change the background color of the document body to yellow when a
+          button is clicked.
+        </p>
+        <button onclick="changeBackgroundColor()">
+          Change Background Color
+        </button>
+      </li>
+      <li>
+        <p>Set a cookie with a name and value when a button is clicked.</p>
+        <p>
+          Place your cookie value here:
+          <span id="cookie-value" contenteditable="true">value</span>
+        </p>
+        <button onclick="setCookie()">Set cookie</button>
+        <p id="cookie-output"></p>
+      </li>
+      <li>
+        <p>
+          Select and highlight all paragraphs in a document when a button is
+          clicked.
+        </p>
+        <button onclick="highlightParagraphs()">
+          Highlight all paragraphs
+        </button>
+      </li>
+      <li>
+        <p>
+          Replace the text content of a paragraph with a new value when a button
+          is clicked.
+        </p>
+        <p>
+          Place your content here:
+          <span id="your-content" contenteditable="true">content</span>
+        </p>
+        <button onclick="replaceContent()">Replace content</button>
+        <p id="content-output">Content to replace</p>
+      </li>
+      <li>
+        <p>
+          Change the background color and add a custom data attribute to a
+          specific element when a button is clicked.
+        </p>
+        <button onclick="changeBGAddAppAttirbute()">
+          Change Background Color and Add an Attribute
+        </button>
+        <p id="specific-element">Specific Element</p>
+        <p>Your custom attribute value: <span id="custom-value"></span></p>
+      </li>
+      <li>
+        <p>
+          Attach an event listener to a button that triggers an alert when
+          clicked, and demonstrate event propagation by attaching another event
+          listener to a parent element that triggers a different alert.
+        </p>
+        <div id="parent">
+          <button id="child">Click here to see alerts</button>
+        </div>
+      </li>
+    </ol>
+    <script src="js/app.js"></script>
+  </body>
+</html>
