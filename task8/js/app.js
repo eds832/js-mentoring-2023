@@ -79,7 +79,7 @@ function changeBackgroundColor() {
 const MY_COOKIE_NAME = "myCookie";
 
 function setCookie() {
-  let cookieValue = document
+  const cookieValue = document
     .querySelector("#cookie-value")
     .textContent.replace(/\s+/g, "-")
     .replace(/[;=]/g, "");
@@ -104,14 +104,14 @@ function showCookie(name) {
 // 7. Select and highlight all paragraphs in a document when a button is clicked.
 
 function highlightParagraphs() {
-  let nodes = document.querySelectorAll("p");
+  const nodes = document.querySelectorAll("p");
   nodes.forEach((node) => (node.style.color = "lightgreen"));
 }
 
 // 8. Replace the text content of a paragraph with a new value when a button is clicked.
 
 function replaceContent() {
-  let newContent = document.querySelector("#your-content").textContent;
+  const newContent = document.querySelector("#your-content").textContent;
   document.querySelector("#content-output").innerHTML = newContent;
 }
 
@@ -121,14 +121,14 @@ function replaceContent() {
 const DATA_CUSTOM = "data-custom";
 
 function changeBGAddAppAttirbute() {
-  let elem = document.querySelector("#specific-element");
+  const elem = document.querySelector("#specific-element");
   elem.style.backgroundColor = "#989";
   elem.setAttribute(DATA_CUSTOM, "my-value");
   showCustomAttribute();
 }
 
 function showCustomAttribute() {
-  let elem = document.querySelector("#specific-element");
+  const elem = document.querySelector("#specific-element");
   document.querySelector("#custom-value").innerHTML =
     elem.getAttribute(DATA_CUSTOM);
 }
