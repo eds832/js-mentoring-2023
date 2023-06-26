@@ -90,7 +90,7 @@ function setCookie() {
 }
 
 function showCookie(name) {
-  let cookieArray = document.cookie.split(";");
+  const cookieArray = document.cookie.split(";");
 
   const cookiePair = cookieArray
     .map((el) => el.split("="))
