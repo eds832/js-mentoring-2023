@@ -26,15 +26,11 @@ function displayBrowserInfo() {
     ["Apple Safari", /safari/i],
     ["Unknown", /.+/i],
   ];
-  let br = "Unknown";
-  let num = "unknown";
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i][1].test(browserUserAgent)) {
-      br = arr[i][0];
-      num = browserUserAgent.split(arr[i][1])[1].split(" ")[0].replace("/", "");
-      break;
-    }
-  }
+  const elem = arr.find((el) => el[1].test(browserUserAgent));
+  const br = elem ? elem[0] : "Unknown";
+  const num = elem
+    ? browserUserAgent.split(elem[1])[1].split(" ")[0].replace("/", "")
+    : "unknown";
   document.querySelector(
     "#browser-output"
   ).innerHTML = `Browser user agent: ${browserUserAgent}<br>Browser name: ${br}<br> 
@@ -44,15 +40,15 @@ function displayBrowserInfo() {
 // 4. Display the screen width and height of the user's device using the window.screen object.
 
 function displayScreenInfo() {
-  let width = window.screen.width;
-  let height = window.screen.height;
+  const width = window.screen.width;
+  const height = window.screen.height;
 
-  let currentWidth =
+  const currentWidth =
     window.innerWidth ||
     document.documentElement.clientWidth ||
     document.body.clientWidth;
 
-  let currentHeight =
+  const currentHeight =
     window.innerHeight ||
     document.documentElement.clientHeight ||
     document.body.clientHeight;
@@ -96,15 +92,12 @@ function setCookie() {
 function showCookie(name) {
   let cookieArray = document.cookie.split(";");
 
-  let cookie = null;
-  for (let i = 0; i < cookieArray.length; i++) {
-    let cookiePair = cookieArray[i].split("=");
+  const cookiePair = cookieArray
+    .map((el) => el.split("="))
+    .find((el) => name === el[0].trim());
 
-    if (name == cookiePair[0].trim()) {
-      cookie = cookiePair[1];
-      break;
-    }
-  }
+  const cookie = cookiePair ? cookiePair[1] : null;
+
   document.querySelector("#cookie-output").innerHTML = `Your cookie: ${cookie}`;
 }
 
