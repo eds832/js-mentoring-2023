@@ -193,4 +193,4 @@ const salmon: Fish /** checking is OK */ = {
 // "strict": true enables all strict type checking options.
 // "strictNullChecks": true enables strict null checks.
 // "esModuleInterop": true enables interoperability between CommonJS and ES6 modules.
-// "paths": {"@typings/*": ["./typings/*"]} specifies custom typings directories.
+// "typeRoots": ["./typings/**"] specifies custom typings directories.

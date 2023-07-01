@@ -9,7 +9,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "module": "commonjs",
-    "typeRoots": ["./typings"]
+    "typeRoots": ["./typings/**"]
   },
   "include": ["src/**/*"]
 }
