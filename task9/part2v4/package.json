@@ -1,0 +1,14 @@
+{
+  "name": "part2v4",
+  "version": "1.0.0",
+  "description": "description of part2",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "task9-part2": "^1.0.4"
+  }
+}
