@@ -1,0 +1,11 @@
+{
+  "name": "task9-part2",
+  "version": "1.0.7",
+  "description": "description of part2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eduard Sardyka",
+  "license": "ISC"
+}
